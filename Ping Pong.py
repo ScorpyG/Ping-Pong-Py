@@ -13,7 +13,7 @@ sounds.init()
 
 exit = False #keep the game open
 fps = 60
-clock = pygame.time.Clock() #clock
+clock = pygame.time.Clock() #Initiated the second counter for (frame per second (fps))
 FPS = clock.tick(fps) #frame per second (DO NOT MOVE or CHANGE THIS LINE)
 font = pygame.font.SysFont("candara",50) #font to render scores
 font2 = pygame.font.SysFont("candara",70) #font to render Win/Lose
@@ -260,3 +260,7 @@ while True:
         screen.blit(resl4,(265,550))
     
     pygame.display.flip() 
+
+    #extensive code comments due to the fact no many people can understanding coding
+    #For all the programmers out there (these comments aren't meant for you, and you know
+    # who they are for)
