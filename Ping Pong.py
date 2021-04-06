@@ -30,7 +30,6 @@ def play_s1 ():
 def play_s2 ():
     sound2.play()
 
-
 #set up the colours
 BLACK = (0,0,0)
 WHITE = (255,255,255)
@@ -81,9 +80,9 @@ circle_y = 300
 
 
 #ball's initial movement
-speed_x = 160
-speed_y = 160
-speed_circ = 160
+speed_x = 110
+speed_y = 110
+speed_circ = 110
 
 #Scores
 p1_score = -1
@@ -93,7 +92,7 @@ p4_score = 0
 
 
 #Use this to change bars speed
-z1 = 1.2
+z1 = 1.0
 
 
 while True:
