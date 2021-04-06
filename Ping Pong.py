@@ -35,7 +35,7 @@ BLACK = (0,0,0)
 WHITE = (255,255,255)
 RED = (255,0,0)
 BLUE = (0,0,255)
-
+YELLOW = (255,255,0)
 
 #Game's window
 pygame.display.set_caption('Ping Pong Py') #window's name
@@ -45,14 +45,14 @@ background = screen.convert()
 background.fill(BLACK)
 
 
-#creat players
+#create players
 player = pygame.Surface((10,90)) #"draw" the bar
 
 p1 = player.convert() #put pixel unit of the bar same as the screen
-p1.fill(RED) #colour
+p1.fill(WHITE) #colour
 
 p2 = player.convert()
-p2.fill(BLUE)
+p2.fill(WHITE)
 
 
 #creat ball
@@ -79,7 +79,7 @@ circle_x = 393
 circle_y = 300
 
 
-#ball's initial movement
+#ball's speed
 speed_x = 110
 speed_y = 110
 speed_circ = 110
@@ -91,7 +91,7 @@ p3_score = 0
 p4_score = 0
 
 
-#Use this to change bars speed
+#Players' speed
 z1 = 1.0
 
 
@@ -139,10 +139,10 @@ while True:
               
               
     #print out scores on the screen          
-    score1 = font.render(str(p1_score), True, RED) 
-    score2 = font.render(str(p2_score), True, BLUE)
-    score3 = font.render(str(p3_score), True, RED) 
-    score4 = font.render(str(p4_score), True, BLUE)
+    score1 = font.render(str(p1_score), True, WHITE) 
+    score2 = font.render(str(p2_score), True, WHITE)
+    score3 = font.render(str(p3_score), True, WHITE) 
+    score4 = font.render(str(p4_score), True, WHITE)
  
  
     #set up the play ground
@@ -233,10 +233,10 @@ while True:
         screen.blit(resl3,(255,500))
         
     elif p1_score >= NumOfRounds:
-        resl1 = font2.render(str("Win"), True, WHITE) 
+        resl1 = font2.render(str("Win"), True, YELLOW) 
         resl2 = font2.render(str("Lose"), True, WHITE)
         resl3 = font3.render(str("Press 'Enter' to restart"), True, WHITE)
-        resl4 = font3.render(str("Press 'Esc' to quit"), True, WHITE)
+        resl4 = font3.render(str("Press 'Esc' to quit"), True, RED)
         circle_x, circle_y = 393, 300  #reset ball's position after score
         p1_y,p2_y = 270, 270  #reset bar's position after score
         fps = 0
@@ -246,10 +246,10 @@ while True:
         screen.blit(resl4,(265,550))
         
     elif p2_score >= NumOfRounds:
-        resl1 = font2.render(str("Lose"), True, WHITE) 
+        resl1 = font2.render(str("Lose"), True, YELLOW) 
         resl2 = font2.render(str("Win"), True, WHITE)
         resl3 = font3.render(str("Press 'Enter' to restart"), True, WHITE)
-        resl4 = font3.render(str("Press 'Esc' to quit"), True, WHITE)
+        resl4 = font3.render(str("Press 'Esc' to quit"), True, RED)
         circle_x, circle_y = 393, 300  #reset ball's position after score
         p1_y,p2_y = 270, 270  #reset bar's position after score
         fps = 0
